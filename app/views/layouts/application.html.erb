@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <h1>InNerd.io</h1>
+    <p>InNerd.io is a tool to find more about software developers.</p>
+    <%= render 'search' %>
+
+    <% flash.each do |name, message| -%>
+      <%= content_tag :div, message, class: name %>
+    <% end -%>
+
     <%= yield %>
   </body>
 </html>

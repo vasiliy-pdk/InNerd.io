@@ -7,6 +7,16 @@ RSpec.describe NerdsController, type: :controller do
       get :index
       expect(response).to have_http_status(:success)
     end
+
+    describe 'flash messages' do
+      render_views
+
+      it 'shows flash messages if any' do
+        get :index, { flash: { one: 'Flash 1', two: 'Flash 2' } }
+
+        expect(response.body).to include('Flash 1', 'Flash 2')
+      end
+    end
   end
 
   describe 'GET #search' do
