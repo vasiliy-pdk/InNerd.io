@@ -13,7 +13,7 @@ RSpec.describe NerdsDataSource, type: :model do
 
     context 'when user is not found' do
       it 'raises an exception' do
-        expect { NerdsDataSource.find non_existing_user }.to raise_exception(Octokit::NotFound)
+        expect { NerdsDataSource.find non_existing_user }.to raise_exception(NerdsDataSource::NotFound)
       end
     end
   end
@@ -27,7 +27,7 @@ RSpec.describe NerdsDataSource, type: :model do
 
     context 'when user is not found' do
       it 'raises an exception' do
-        expect { NerdsDataSource.find non_existing_user }.to raise_exception(Octokit::NotFound)
+        expect { NerdsDataSource.find non_existing_user }.to raise_exception(NerdsDataSource::NotFound)
       end
     end
   end

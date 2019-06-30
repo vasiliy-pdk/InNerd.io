@@ -13,6 +13,11 @@ class NerdsController < ApplicationController
   end
 
   def show
-    @nerd = Nerd.find(params[:id])
+    user_name = params[:id]
+    @nerd = Nerd.find(user_name)
+  rescue NerdsDataSource::NotFound
+    # @TODO: use `t` instead of the string, to reduce duplications
+    flash[:notice] = "There is no GitHub account with name \"#{user_name}\". Please try to search using another username."
+    redirect_to action: 'index'
   end
 end

@@ -37,23 +37,33 @@ RSpec.describe NerdsController, type: :controller do
   end
 
   describe 'GET #show' do
-    it 'assigns found nerd to the template' do
-      found_nerd = double('nerd')
-      allow(Nerd).to receive(:find).with('KentBeck').and_return found_nerd
+    context 'when nerd is found' do
+      let(:found_nerd) { double 'nerd' }
 
-      get :show, params: { id: 'KentBeck' }
+      before do
+        allow(Nerd).to receive(:find).with('KentBeck').and_return found_nerd
 
-      expect(assigns(:nerd)).to be(found_nerd)
-    end
+        get :show, params: { id: 'KentBeck' }
+      end
 
-    it 'renders show view' do
-      get :show, params: { id: 'KentBeck' }
+      it 'assigns found nerd to the template' do
+        expect(assigns(:nerd)).to be(found_nerd)
+      end
 
-      expect(response).to render_template(:show)
+      it 'renders show view' do
+        expect(response).to render_template(:show)
+      end
     end
 
     context 'when nerd was not found' do
-      xit 'redirects to search page to display potential matches'
+      it 'redirects to search page with a polite notice' do
+        allow(Nerd).to receive(:find).and_raise NerdsDataSource::NotFound
+        non_existing_nerd = 'non_existing_nerd'
+        get :show, params: { id: non_existing_nerd }
+
+        expect(response).to redirect_to(root_path)
+        expect(flash[:notice]).to match(/no GitHub account with name "#{non_existing_nerd}"/i)
+      end
     end
   end
 end
