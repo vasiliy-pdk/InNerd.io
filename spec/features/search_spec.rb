@@ -7,7 +7,7 @@ feature 'Nerds search', type: :feature do
     fill_in 'user_name', with: 'vasiliy-pdk'
     click_on 'Search'
 
-    expect(page).to have_text('Vasyl Pedak')
-    expect(page).to have_text(/javascript/)
+    expect(page).to have_text('vasiliy-pdk')
+    expect(page).to have_text(/javascript/i)
   end
 end
