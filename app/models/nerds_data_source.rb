@@ -12,7 +12,7 @@ class NerdsDataSource
     private
     
     def client
-      @client ||= Octokit::Client.new(:access_token => 'b52e15a2dfd0ff9cd2bd6027b478fe70c0d3cdf2')
+      @client ||= Octokit::Client.new(:access_token => ENV['GITHUB_API_ACCESS_TOKEN'])
     end
 
     def with_respect_to_not_found
