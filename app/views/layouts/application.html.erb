@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="root">
   <head>
-    <title>InNerd</title>
+    <meta charset="utf-8">
+    <title>InNerd.io discover everything about a software developer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,14 +14,18 @@
   </head>
 
   <body>
-    <h1>InNerd.io</h1>
-    <p>InNerd.io is a tool to find more about software developers.</p>
-    <%= render 'search' %>
+    <section class="container">
+      <div class="box">
+        <div>Discover everything about a software developer.</div>
 
-    <% flash.each do |name, message| -%>
-      <%= content_tag :div, message, class: name %>
-    <% end -%>
+        <%= render 'search' %>
 
-    <%= yield %>
+        <% flash.each do |name, message| -%>
+          <%= content_tag :div, message, class: "box__row #{name}"%>
+        <% end -%>
+
+        <%= yield %>
+      </div>
+    </section>
   </body>
 </html>

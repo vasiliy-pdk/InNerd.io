@@ -1,4 +1,6 @@
 <%= form_tag(search_nerds_path, method: 'get') do %>
-    <%= text_field_tag(:user_name, '', placeholder: 'Type GitHub username here') %>
-    <%= submit_tag 'Search' %>
+  <div class="search">
+    <%= text_field_tag(:user_name, '', placeholder: 'Type GitHub username here', class: 'search__input box__row') %>
+    <%= submit_tag 'Search', class: 'search__button box__row' %>
+  </div>
 <% end %>
