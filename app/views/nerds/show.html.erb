@@ -1,3 +1,5 @@
 <div class="search-result">
-  <%= @nerd.login %> loves <%= @nerd.favourite_language || 'Unknown' %>
+  <div><%= @nerd.login %></div>
+  <div class="heart" title="Preferred programming language"></div>
+  <div><%= @nerd.favourite_language || 'Unknown' %></div>
 </div>

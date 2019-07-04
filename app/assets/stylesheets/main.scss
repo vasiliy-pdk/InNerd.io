@@ -1,7 +1,14 @@
+$action-darker: rgba(25, 121, 198, 1);
+$action: rgba(32, 148, 232, 1);
+$action-lighter: rgba(67, 165, 246, 1);
+$light: rgba(252, 247, 248, 1);
+$dark: rgba(206, 211, 220, 1);
+
 .root {
   font-size: calc(1em + 1vw);
   font-family: Helvetica, Arial, sans-serif;
   color: #000;
+  background-color: $dark;
 }
 
 .centered {
@@ -14,12 +21,13 @@
 
 .box {
   box-sizing: border-box;
-  border: 1px solid lightgrey;
   border-radius: 5px;
-  padding: 3rem;
+  padding: 2.5rem 3rem 3rem;
   max-width: 102vw;
 
   font-size: 1rem;
+  background-color: $light;
+  box-shadow: 0 0 20px -8px #111;
 }
 
 .title {
@@ -56,14 +64,76 @@
   border-width: 3px;
   border-radius: 5px;
   padding: 3px;
+  line-height: 1.75em;
 
   outline: none;
+
+  border-color: $action-lighter;
+  transition: all 0.5s ease;
+
+  &:hover,
+  &:focus {
+    border-color: $action-darker;
+  }
+}
+
+.search__input {
+  text-align: center;
+
+  &::placeholder {
+    color: #b1b1b1;
+    font-size: 0.9em;
+    text-align: center;
+  }
 }
 
 .search__button {
-  margin-top: 0.25em;
+  margin-top: 0.4em;
+  background-color: $action-lighter;
+
+  &:hover {
+    background-color: $action;
+  }
+
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
 }
 
 .search-result {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
+}
+
+.heart {
+  $size: 1em;
+
+  margin: 0.5em auto 0.25em;
+
+  background-color: red;
+  height: $size;
+  width: $size;
+  transform: rotate(-45deg);
+
+  &:before,
+  &:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: $size;
+    position: absolute;
+    width: $size;
+  }
+
+  &:before {
+    top: -($size / 2);
+    left: 0;
+  }
+
+  animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1) rotate(-45deg); }
+  50% { transform: scale(1.1) rotate(-45deg); }
+  100% { transform: scale(1) rotate(-45deg); }
 }
