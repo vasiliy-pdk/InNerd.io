@@ -11,6 +11,12 @@ $dark: rgba(206, 211, 220, 1);
   background-color: $dark;
 }
 
+@media (orientation: landscape) {
+  .root {
+    font-size: calc(1em + 1vh);
+  }
+}
+
 .centered {
   position: fixed;
   top: 50%;
