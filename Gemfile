@@ -57,6 +57,8 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'webdrivers', '~> 4.0'
   gem 'rails-controller-testing'
+  gem 'vcr', '~> 5.0.0'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

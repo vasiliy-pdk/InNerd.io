@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Nerds search', type: :feature do
+feature 'Nerds search', type: :feature, vcr: { re_record_interval: 1.month } do
   scenario 'user finds a nerd by username and sees their language' do
     visit '/'
 

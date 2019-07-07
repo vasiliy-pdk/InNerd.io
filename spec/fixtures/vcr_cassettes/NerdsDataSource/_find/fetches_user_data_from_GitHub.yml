@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/vasiliy-pdk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.14.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - token b52e15a2dfd0ff9cd2bd6027b478fe70c0d3cdf2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 07 Jul 2019 14:33:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4991'
+      X-Ratelimit-Reset:
+      - '1562513443'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"d6598af91bd94e7ab9a963ef4e6fabca"
+      Last-Modified:
+      - Wed, 03 Jul 2019 20:56:06 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - BD42:47864:497BF78:5BBE56E:5D22029E
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"vasiliy-pdk","id":2930187,"node_id":"MDQ6VXNlcjI5MzAxODc=","avatar_url":"https://avatars0.githubusercontent.com/u/2930187?v=4","gravatar_id":"","url":"https://api.github.com/users/vasiliy-pdk","html_url":"https://github.com/vasiliy-pdk","followers_url":"https://api.github.com/users/vasiliy-pdk/followers","following_url":"https://api.github.com/users/vasiliy-pdk/following{/other_user}","gists_url":"https://api.github.com/users/vasiliy-pdk/gists{/gist_id}","starred_url":"https://api.github.com/users/vasiliy-pdk/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/vasiliy-pdk/subscriptions","organizations_url":"https://api.github.com/users/vasiliy-pdk/orgs","repos_url":"https://api.github.com/users/vasiliy-pdk/repos","events_url":"https://api.github.com/users/vasiliy-pdk/events{/privacy}","received_events_url":"https://api.github.com/users/vasiliy-pdk/received_events","type":"User","site_admin":false,"name":"Vasiliy
+        Pedak","company":"veeqo","blog":"https://www.linkedin.com/in/vasylpedak/","location":"Swansea,
+        UK","email":"truvazia@gmail.com","hireable":true,"bio":null,"public_repos":30,"public_gists":1,"followers":3,"following":11,"created_at":"2012-11-30T11:02:31Z","updated_at":"2019-07-03T20:56:06Z"}'
+    http_version: 
+  recorded_at: Sun, 07 Jul 2019 14:33:02 GMT
+recorded_with: VCR 5.0.0

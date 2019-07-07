@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe NerdsDataSource, type: :model do
+RSpec.describe NerdsDataSource, type: :model, vcr: { re_record_interval: 1.month } do
   let(:known_user) { 'vasiliy-pdk' }
   let(:non_existing_user) { 'vaaasiiiiliiiiyyy-pdk' }
 
