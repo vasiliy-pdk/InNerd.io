@@ -14,7 +14,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - token b52e15a2dfd0ff9cd2bd6027b478fe70c0d3cdf2
+      - token <GITHUB_API_ACCESS_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 07 Jul 2019 14:33:02 GMT
+      - Sun, 07 Jul 2019 15:03:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,9 +35,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4991'
+      - '4981'
       X-Ratelimit-Reset:
-      - '1562513443'
+      - '1562515393'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -72,12 +72,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - BD42:47864:497BF78:5BBE56E:5D22029E
+      - 883A:447FC:4ADF553:5D3E492:5D2209B1
     body:
       encoding: ASCII-8BIT
       string: '{"login":"vasiliy-pdk","id":2930187,"node_id":"MDQ6VXNlcjI5MzAxODc=","avatar_url":"https://avatars0.githubusercontent.com/u/2930187?v=4","gravatar_id":"","url":"https://api.github.com/users/vasiliy-pdk","html_url":"https://github.com/vasiliy-pdk","followers_url":"https://api.github.com/users/vasiliy-pdk/followers","following_url":"https://api.github.com/users/vasiliy-pdk/following{/other_user}","gists_url":"https://api.github.com/users/vasiliy-pdk/gists{/gist_id}","starred_url":"https://api.github.com/users/vasiliy-pdk/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/vasiliy-pdk/subscriptions","organizations_url":"https://api.github.com/users/vasiliy-pdk/orgs","repos_url":"https://api.github.com/users/vasiliy-pdk/repos","events_url":"https://api.github.com/users/vasiliy-pdk/events{/privacy}","received_events_url":"https://api.github.com/users/vasiliy-pdk/received_events","type":"User","site_admin":false,"name":"Vasiliy
         Pedak","company":"veeqo","blog":"https://www.linkedin.com/in/vasylpedak/","location":"Swansea,
         UK","email":"truvazia@gmail.com","hireable":true,"bio":null,"public_repos":30,"public_gists":1,"followers":3,"following":11,"created_at":"2012-11-30T11:02:31Z","updated_at":"2019-07-03T20:56:06Z"}'
     http_version: 
-  recorded_at: Sun, 07 Jul 2019 14:33:02 GMT
+  recorded_at: Sun, 07 Jul 2019 15:03:14 GMT
 recorded_with: VCR 5.0.0
