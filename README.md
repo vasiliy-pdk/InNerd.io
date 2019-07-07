@@ -14,3 +14,13 @@ $ export GITHUB_API_ACCESS_TOKEN=your-token
 
 prior launching the app. The token can be generated in [GitHub > Settings > Developer Settings > Personal Access Settings](https://github.com/settings/tokens). 
 Generate one for development, another for production.
+
+### In development and test
+
+Create `config/local_env.yml` with 
+
+```
+GITHUB_API_ACCESS_TOKEN: your-token
+```
+
+It will be loaded automatically. Do not commit this file into the repository.
