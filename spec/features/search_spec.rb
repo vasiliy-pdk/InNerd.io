@@ -8,6 +8,6 @@ feature 'Nerds search', type: :feature, vcr: { re_record_interval: 1.month } do
     click_on 'Search'
 
     expect(page).to have_text('vasiliy-pdk')
-    expect(page).to have_text(/javascript/i)
+    expect(page).to have_text(/Ruby/i)
   end
 end

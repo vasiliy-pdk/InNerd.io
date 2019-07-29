@@ -1,13 +1,17 @@
 class NerdsDataSource
-  # @TODO: Wrap Octokit::NotFound exception into NerdsDataSource::NotFound
+  
   def self.find(user_name)
     with_respect_to_not_found { client.user(user_name) }
   end
   
   def self.primary_languages(user_name)
-    with_respect_to_not_found { client.repositories(user_name).map(&:language) }
+    with_respect_to_not_found { own_repositories(user_name).map(&:language) }
   end
   
+  def self.own_repositories(user_name)
+    client.repositories(user_name).reject { |repository| repository[:fork] == true }
+  end
+
   class << self
     private
     
